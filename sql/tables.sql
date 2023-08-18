@@ -1,4 +1,4 @@
-create table modeling.ivl_ref_mold_tbl(
+create table ivl_ref_mold_tbl(
     "country_cd" char(3) not null,
     "plant_cd" varchar(250) not null,
     "mold_cd" varchar(250) not null,
@@ -19,7 +19,7 @@ create table modeling.ivl_ref_mold_tbl(
     PRIMARY KEY (country_cd, plant_cd, mold_cd, mold_wt_grm)
 ) ;
 
-create table modeling.ivl_ref_machine_tbl(
+create table ivl_ref_machine_tbl(
     "country_cd" char(3) not null,
     "plant_cd" varchar(250) not null,
     "machine_cd" varchar(250) not null,
@@ -32,7 +32,7 @@ create table modeling.ivl_ref_machine_tbl(
     PRIMARY KEY (country_cd, plant_cd, machine_cd)
 );
 
-create table modeling.ivl_ref_plant_tbl(
+create table ivl_ref_plant_tbl(
     "country_cd" char(3) not null,
     "plant_cd" varchar(250) not null,
     "plant_name" varchar(250),
@@ -51,7 +51,7 @@ create table modeling.ivl_ref_plant_tbl(
     PRIMARY KEY (country_cd, plant_cd)
 );
 
-create table modeling.ivl_ref_country_tbl(
+create table ivl_ref_country_tbl(
     "country_cd" char(3) not null,
     "country_cd_2char" char(2),
     "country_name" varchar(250) not null,
@@ -64,7 +64,7 @@ create table modeling.ivl_ref_country_tbl(
     PRIMARY KEY (country_cd)
 );
 
-create table modeling.ivl_ref_status_tbl(
+create table ivl_ref_status_tbl(
     "status_cd" char(1) not null,
     "status_desc" varcahr(250) not null,
     "last_upd_dttm" timestamp DEFAULT CURRENT_TIMESTAMP,
@@ -72,7 +72,7 @@ create table modeling.ivl_ref_status_tbl(
     PRIMARY KEY (status_cd)
 );
 
-create table modeling.ivl_ref_unit_tbl(
+create table ivl_ref_unit_tbl(
     "country_cd" char(3) not null,
     "plant_cd" varchar(250) not null,
     "unit_cd" varchar(250) not null,
@@ -80,7 +80,7 @@ create table modeling.ivl_ref_unit_tbl(
     PRIMARY KEY (country_cd, plant_cd, unit_cd)
 );
 
-create table modeling.ivl_ref_power_meter_tbl(
+create table ivl_ref_power_meter_tbl(
     "country_cd" char(3) not null,
     "plant_cd" varchar(250) not null,
     "power_meter_cd" varchar(250) not null,
